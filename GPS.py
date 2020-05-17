@@ -10,8 +10,10 @@ import serial
 class GpsThreadReadings (threading.Thread):
     def __init__(self,GpsReadings):
         super(GpsThreadReadings , self).__init__(name="GPS thread")
-        self.serialCom = serial.Serial(port='/dev/ttyACM0',baudrate=115200)
+        #self.serialCom = serial.Serial(port='/dev/ttyACM0',baudrate=115200)
+        self.serialCom = serial.Serial(port='COM3',baudrate=115200)
         self.GpsReadings = GpsReadings
+        self.GpsRun = True
         print("GPS Created")
         
 
@@ -22,7 +24,7 @@ class GpsThreadReadings (threading.Thread):
         self.defLat = defLat
         self.defLong = defLong
     def run(self):
-        while True:
+        while self.GpsRun:
             #self.GpsReadings[1] = self.GpsReadings[1] - self.defLat*0.5
             #self.GpsReadings[2] = self.GpsReadings[2] - self.defLong*0.5
             #sleep(0.01)

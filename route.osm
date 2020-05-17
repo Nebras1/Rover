@@ -1,231 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<osm version="0.6" generator="Overpass API 0.7.55.7 8b86ff77">
-
-<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
-
-<meta osm_base="2019-07-22T12:50:02Z"/>
-
-  <bounds minlat="30.0059000" minlon="31.1707000" maxlat="30.0271000" maxlon="31.2036000"/>
-<node id="6408115781103" lat="30.015861" lon="31.176037" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="1975103" lat="30.015887" lon="31.176117" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="2975103" lat="30.015913" lon="31.176198" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="3975103" lat="30.015939" lon="31.176278" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="4975103" lat="30.015965" lon="31.176358" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="5975103" lat="30.015991" lon="31.176439" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6975103" lat="30.016018" lon="31.176519" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6408115777103" lat="30.016054" lon="31.176586" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="11975103" lat="30.016028" lon="31.176597" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="12975103" lat="30.016003" lon="31.176608" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="13975103" lat="30.015978" lon="31.176619" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="14975103" lat="30.015952" lon="31.176630" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="15975103" lat="30.015927" lon="31.176641" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="16975103" lat="30.015902" lon="31.176653" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6802691397103" lat="30.015874" lon="31.176665" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6802691391103" lat="30.015849" lon="31.176686" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6802691396103" lat="30.015838" lon="31.176717" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6408126085103" lat="30.015842" lon="31.176747" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="51975103" lat="30.015882" lon="31.176870" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="52975103" lat="30.015923" lon="31.176993" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="53975103" lat="30.015963" lon="31.177116" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="54975103" lat="30.016003" lon="31.177239" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="55975103" lat="30.016044" lon="31.177361" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="56975103" lat="30.016084" lon="31.177484" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6408126087103" lat="30.016132" lon="31.177594" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="61975103" lat="30.016120" lon="31.177602" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="62975103" lat="30.016108" lon="31.177610" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="63975103" lat="30.016096" lon="31.177618" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="64975103" lat="30.016083" lon="31.177626" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="65975103" lat="30.016071" lon="31.177633" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="66975103" lat="30.016059" lon="31.177641" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395446272103" lat="30.016048" lon="31.177649" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="71975103" lat="30.016026" lon="31.177659" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="72975103" lat="30.016005" lon="31.177669" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="73975103" lat="30.015983" lon="31.177679" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="74975103" lat="30.015961" lon="31.177690" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="75975103" lat="30.015939" lon="31.177700" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="76975103" lat="30.015918" lon="31.177710" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6408115773103" lat="30.015896" lon="31.177720" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="81975103" lat="30.015878" lon="31.177729" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="82975103" lat="30.015861" lon="31.177737" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="83975103" lat="30.015843" lon="31.177745" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="84975103" lat="30.015826" lon="31.177753" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="85975103" lat="30.015808" lon="31.177762" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="86975103" lat="30.015791" lon="31.177770" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395446273103" lat="30.015773" lon="31.177778" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="91975103" lat="30.015756" lon="31.177786" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="92975103" lat="30.015738" lon="31.177795" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="93975103" lat="30.015721" lon="31.177803" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="94975103" lat="30.015703" lon="31.177811" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="95975103" lat="30.015686" lon="31.177819" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="96975103" lat="30.015668" lon="31.177828" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6408115769103" lat="30.015651" lon="31.177836" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="101975103" lat="30.015629" lon="31.177846" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="102975103" lat="30.015608" lon="31.177856" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="103975103" lat="30.015586" lon="31.177866" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="104975103" lat="30.015565" lon="31.177876" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="105975103" lat="30.015543" lon="31.177887" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="106975103" lat="30.015521" lon="31.177897" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6408115768103" lat="30.015500" lon="31.177907" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="111975103" lat="30.015458" lon="31.177926" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="112975103" lat="30.015417" lon="31.177946" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="113975103" lat="30.015376" lon="31.177965" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="114975103" lat="30.015335" lon="31.177985" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="115975103" lat="30.015293" lon="31.178004" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="116975103" lat="30.015252" lon="31.178024" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395446274103" lat="30.015211" lon="31.178043" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="121975103" lat="30.015173" lon="31.178061" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="122975103" lat="30.015135" lon="31.178078" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="123975103" lat="30.015097" lon="31.178096" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="124975103" lat="30.015058" lon="31.178114" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="125975103" lat="30.015020" lon="31.178131" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="126975103" lat="30.014982" lon="31.178149" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395307585103" lat="30.014944" lon="31.178167" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="131975103" lat="30.014906" lon="31.178185" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="132975103" lat="30.014867" lon="31.178204" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="133975103" lat="30.014829" lon="31.178223" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="134975103" lat="30.014791" lon="31.178242" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="135975103" lat="30.014752" lon="31.178260" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="136975103" lat="30.014714" lon="31.178279" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395306983103" lat="30.014666" lon="31.178310" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="141975103" lat="30.014681" lon="31.178381" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="142975103" lat="30.014695" lon="31.178452" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="143975103" lat="30.014709" lon="31.178524" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="144975103" lat="30.014723" lon="31.178595" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="145975103" lat="30.014737" lon="31.178667" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="146975103" lat="30.014752" lon="31.178738" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395306984103" lat="30.014779" lon="31.178797" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="151975103" lat="30.014749" lon="31.178802" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="152975103" lat="30.014720" lon="31.178808" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="153975103" lat="30.014691" lon="31.178813" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="154975103" lat="30.014662" lon="31.178819" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="155975103" lat="30.014633" lon="31.178824" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="156975103" lat="30.014604" lon="31.178829" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395307588103" lat="30.014575" lon="31.178835" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="161975103" lat="30.014530" lon="31.178843" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="162975103" lat="30.014486" lon="31.178851" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="163975103" lat="30.014442" lon="31.178860" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="164975103" lat="30.014397" lon="31.178868" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="165975103" lat="30.014353" lon="31.178876" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="166975103" lat="30.014309" lon="31.178885" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6405822201103" lat="30.014247" lon="31.178908" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="171975103" lat="30.014254" lon="31.178927" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="172975103" lat="30.014261" lon="31.178946" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="173975103" lat="30.014268" lon="31.178964" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="174975103" lat="30.014275" lon="31.178983" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="175975103" lat="30.014282" lon="31.179002" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="176975103" lat="30.014289" lon="31.179020" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
-<node id="6395307648103" lat="30.014314" lon="31.179036" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
- <way id="348553335" version="10" timestamp="2019-04-08T04:19:00Z" changeset="99992695" uid="9990114" user="The_Plateau">
-<nd ref="6408115781103"/>
-<nd ref="1975103"/>
-<nd ref="2975103"/>
-<nd ref="3975103"/>
-<nd ref="4975103"/>
-<nd ref="5975103"/>
-<nd ref="6975103"/>
-<nd ref="6408115777103"/>
-<nd ref="11975103"/>
-<nd ref="12975103"/>
-<nd ref="13975103"/>
-<nd ref="14975103"/>
-<nd ref="15975103"/>
-<nd ref="16975103"/>
-<nd ref="6802691397103"/>
-<nd ref="6802691391103"/>
-<nd ref="6802691396103"/>
-<nd ref="6408126085103"/>
-<nd ref="51975103"/>
-<nd ref="52975103"/>
-<nd ref="53975103"/>
-<nd ref="54975103"/>
-<nd ref="55975103"/>
-<nd ref="56975103"/>
-<nd ref="6408126087103"/>
-<nd ref="61975103"/>
-<nd ref="62975103"/>
-<nd ref="63975103"/>
-<nd ref="64975103"/>
-<nd ref="65975103"/>
-<nd ref="66975103"/>
-<nd ref="6395446272103"/>
-<nd ref="71975103"/>
-<nd ref="72975103"/>
-<nd ref="73975103"/>
-<nd ref="74975103"/>
-<nd ref="75975103"/>
-<nd ref="76975103"/>
-<nd ref="6408115773103"/>
-<nd ref="81975103"/>
-<nd ref="82975103"/>
-<nd ref="83975103"/>
-<nd ref="84975103"/>
-<nd ref="85975103"/>
-<nd ref="86975103"/>
-<nd ref="6395446273103"/>
-<nd ref="91975103"/>
-<nd ref="92975103"/>
-<nd ref="93975103"/>
-<nd ref="94975103"/>
-<nd ref="95975103"/>
-<nd ref="96975103"/>
-<nd ref="6408115769103"/>
-<nd ref="101975103"/>
-<nd ref="102975103"/>
-<nd ref="103975103"/>
-<nd ref="104975103"/>
-<nd ref="105975103"/>
-<nd ref="106975103"/>
-<nd ref="6408115768103"/>
-<nd ref="111975103"/>
-<nd ref="112975103"/>
-<nd ref="113975103"/>
-<nd ref="114975103"/>
-<nd ref="115975103"/>
-<nd ref="116975103"/>
-<nd ref="6395446274103"/>
-<nd ref="121975103"/>
-<nd ref="122975103"/>
-<nd ref="123975103"/>
-<nd ref="124975103"/>
-<nd ref="125975103"/>
-<nd ref="126975103"/>
-<nd ref="6395307585103"/>
-<nd ref="131975103"/>
-<nd ref="132975103"/>
-<nd ref="133975103"/>
-<nd ref="134975103"/>
-<nd ref="135975103"/>
-<nd ref="136975103"/>
-<nd ref="6395306983103"/>
-<nd ref="141975103"/>
-<nd ref="142975103"/>
-<nd ref="143975103"/>
-<nd ref="144975103"/>
-<nd ref="145975103"/>
-<nd ref="146975103"/>
-<nd ref="6395306984103"/>
-<nd ref="151975103"/>
-<nd ref="152975103"/>
-<nd ref="153975103"/>
-<nd ref="154975103"/>
-<nd ref="155975103"/>
-<nd ref="156975103"/>
-<nd ref="6395307588103"/>
-<nd ref="161975103"/>
-<nd ref="162975103"/>
-<nd ref="163975103"/>
-<nd ref="164975103"/>
-<nd ref="165975103"/>
-<nd ref="166975103"/>
-<nd ref="6405822201103"/>
-<nd ref="171975103"/>
-<nd ref="172975103"/>
-<nd ref="173975103"/>
-<nd ref="174975103"/>
-<nd ref="175975103"/>
-<nd ref="176975103"/>
-<nd ref="6395307648103"/>
-</way>
-
- </osm>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<osm version="0.6" generator="Overpass API 0.7.55.7 8b86ff77">
+
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+
+<meta osm_base="2019-07-22T12:50:02Z"/>
+
+  <bounds minlat="30.0059000" minlon="31.1707000" maxlat="30.0271000" maxlon="31.2036000"/>
+<node id="6405822201103" lat="30.014264" lon="31.178918" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="1975103" lat="30.014309" lon="31.178910" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="2975103" lat="30.014353" lon="31.178902" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="3975103" lat="30.014397" lon="31.178893" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="4975103" lat="30.014441" lon="31.178885" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="5975103" lat="30.014486" lon="31.178877" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="6975103" lat="30.014530" lon="31.178868" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="6395307588103" lat="30.014557" lon="31.178846" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="11975103" lat="30.014561" lon="31.178891" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="12975103" lat="30.014566" lon="31.178936" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="13975103" lat="30.014571" lon="31.178981" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="14975103" lat="30.014576" lon="31.179026" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="15975103" lat="30.014580" lon="31.179072" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="16975103" lat="30.014585" lon="31.179117" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="3958768036103" lat="30.014607" lon="31.179176" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="21975103" lat="30.014680" lon="31.179164" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="22975103" lat="30.014753" lon="31.179151" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="23975103" lat="30.014826" lon="31.179139" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="24975103" lat="30.014899" lon="31.179126" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="25975103" lat="30.014972" lon="31.179114" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="26975103" lat="30.015045" lon="31.179101" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+<node id="6408115764103" lat="30.015118" lon="31.179076" version="2" timestamp="2019-05-10T12:30:39Z" changeset="70107889" uid="9535075" user="JacksonWard"/>
+ <way id="348553335" version="10" timestamp="2019-04-08T04:19:00Z" changeset="99992695" uid="9990114" user="The_Plateau">
+<nd ref="6405822201103"/>
+<nd ref="1975103"/>
+<nd ref="2975103"/>
+<nd ref="3975103"/>
+<nd ref="4975103"/>
+<nd ref="5975103"/>
+<nd ref="6975103"/>
+<nd ref="6395307588103"/>
+<nd ref="11975103"/>
+<nd ref="12975103"/>
+<nd ref="13975103"/>
+<nd ref="14975103"/>
+<nd ref="15975103"/>
+<nd ref="16975103"/>
+<nd ref="3958768036103"/>
+<nd ref="21975103"/>
+<nd ref="22975103"/>
+<nd ref="23975103"/>
+<nd ref="24975103"/>
+<nd ref="25975103"/>
+<nd ref="26975103"/>
+<nd ref="6408115764103"/>
+</way>
+
+ </osm>

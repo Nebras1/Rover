@@ -60,7 +60,13 @@ while True:
         while True:
             routingClass = RoutingUsage("car")
             #Set This point as a Distination Point
-            nodeNeedTOReach=routingClass.node(30.014052333333332 , 31.17912533333333)
+
+            latDistination = gps.getGpsReadings()[1]
+            longDistination = gps.getGpsReadings()[2]
+            nodeNeedTOReach=routingClass.node(latDistination , longDistination)
+
+            print(nodeNeedTOReach)
+            
             lat = gps.getGpsReadings()[1]
             lon = gps.getGpsReadings()[2]
            
@@ -97,6 +103,7 @@ while True:
             #nodeNext=routingClass.node(51.9284338,4.4893559)
             nodes.append(nodeNext)
 
+        nodes.reverse()
         nodesNew = routingClass.arrangeNodesDependsOnLength(nodes)
 
         queueNodesNewRight = routingClass.getRouteMultiple(nodesNew)
