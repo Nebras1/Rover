@@ -57,15 +57,16 @@ while True:
             
             sleep(0.1)
     elif mode == 3:
+        routingClass = RoutingUsage("car")
+        #Set This point as a Distination Point
+
+        latDistination = gps.getGpsReadings()[1]
+        longDistination = gps.getGpsReadings()[2]
+        nodeNeedTOReach=routingClass.node(latDistination , longDistination)
+
+        print(nodeNeedTOReach)
         while True:
-            routingClass = RoutingUsage("car")
-            #Set This point as a Distination Point
-
-            latDistination = gps.getGpsReadings()[1]
-            longDistination = gps.getGpsReadings()[2]
-            nodeNeedTOReach=routingClass.node(latDistination , longDistination)
-
-            print(nodeNeedTOReach)
+            
             
             lat = gps.getGpsReadings()[1]
             lon = gps.getGpsReadings()[2]
