@@ -12,10 +12,11 @@
 
 #include <Wire.h>
 
-//Mode 0 lat
-//Mode 1 longit
-//Mode 2 id
-//Mode 3 other
+//Mode 0 angleRover
+//Mode 1 gyroRover
+//Mode 2 actionDistance
+//Mode 3 angleAction
+//Mode 4 actionRate
 
 
 int mode = 0;
@@ -33,35 +34,53 @@ void loop() {
 // function that executes whenever data is requested by master
 // this function is registered as an event, see setup()
 
-  String lat="";
-  String longit="";
-  String id="";
+  String angleRover="";
+  String gyroRover="";
+  String actionDistance="";
+  String angleAction="";
+  String actionRate="";
 
   long timeBefore =0;
+  
 void receiveEvent(int howMany) {
   String valueRead = "";
   boolean neg = false;
   while ( Wire.available()) { // loop through all but the last
     char c = Wire.read(); // receive byte as a character
-    if(c == ';'){
-      mode = 2;
+    if(c == '!'){
+      mode = 5  ;
       neg = true;
-      Serial.print(id);
-      Serial.print(": ");
-      Serial.print(lat);
+      Serial.print(angleRover);
       Serial.print(",");      
-      Serial.print(longit);
+      Serial.print(gyroRover);
+      Serial.print(": ");
+      Serial.print(actionDistance);
+      Serial.print(",");      
+      Serial.print(angleAction);
+      Serial.print(",");      
+      Serial.print(actionRate);
       Serial.print("  , time: ");
       Serial.println((millis()-timeBefore));
       
       timeBefore=millis();
-      lat="";
-      longit="";
-      id="";
-    }else if(c == ','){
+      angleRover="";
+      gyroRover="";
+      actionDistance="";
+      angleAction="";
+      actionRate="";
+    }else if(c == ';'){
+      neg = true;
+      mode = 4;
+    }else if(c == '$'){
+      neg = true;
+      mode = 3;
+    }else if(c == ':'){
+      neg = true;
+      mode = 2;
+    }else if(c == '&'){
       neg = true;
       mode = 1;
-    }else if(c == ':'){
+    }else if(c == '#'){
       neg = true;
       mode = 0;
     }else{
@@ -69,11 +88,15 @@ void receiveEvent(int howMany) {
     }
     
     if(mode == 0 && !neg){
-      lat = lat+c;
+      angleRover = angleRover+c;
     }else if(mode == 1 && !neg){
-      longit = longit+c;
+      gyroRover = gyroRover+c;
     }else if(mode == 2 && !neg){
-      id = id+c;
+      actionDistance = actionDistance+c;
+    }else if(mode == 3 && !neg){
+      angleAction = angleAction+c;
+    }else if(mode == 4 && !neg){
+      actionRate = actionRate+c;
     }
   }
  
