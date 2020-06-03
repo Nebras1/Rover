@@ -46,16 +46,13 @@ while True:
             
     elif mode == 2:
         while True:
-            if imu.Readings !=None:
+            if imu.Readings !=None and imu.Rates !=None:
                 angle = imu.Readings['Yaw']
-
-            if imu.Rates !=None:
                 gyroZ = imu.Rates['gz']
-
-            
-            print("Heading angle: %s    %s" % (angle,gyroZ))
+                print("Heading angle: %s    %s" % (angle,gyroZ))
             
             sleep(0.1)
+            
     elif mode == 3:
         routingClass = RoutingUsage("car")
         #Set This point as a Distination Point
