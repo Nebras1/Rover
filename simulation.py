@@ -74,32 +74,35 @@ def mainLoopForSendTheNeededLengthAndAngle(KpDistance,KpAngle,KpRate,Gps,routing
     while notReachEndPoint:
         
 
-        if imu.Readings !=None:
+        if imu.Readings !=None and imu.Rates !=None:
             angleRover = imu.Readings['Yaw']
-
-        if imu.Rates !=None:
             gyroRover = imu.Rates['gz']
-       
-        
-        [actionDistance, angleAction,actionRate] = calculateControlAction(KpDistance,KpAngle,KpRate,Gps,listOfPoints,indexCurrentTargetPoint,angleRover,gyroRover)
-        
 
-        #remove this after set Gps
-        #simulateRoverGPS(Gps,listOfPoints,indexCurrentTargetPoint)
         
-        indexCurrentTargetPoint = goToNextTargetOrNot(listOfPoints,Gps,indexCurrentTargetPoint)
-        notReachEndPoint = checkIfNotReachedEndPoint(indexCurrentTargetPoint)
-        
-        sendActionsToMicroController(actionDistance, angleAction,actionRate,addr,bus)
-        print("Distance: %f, Angle: %f, GPS: %f, i: %f" %(actionDistance, angleAction,Gps.getGpsReadings()[1],indexCurrentTargetPoint))
+            [actionDistance, angleAction,actionRate] = calculateControlAction(KpDistance,KpAngle,KpRate,Gps,listOfPoints,indexCurrentTargetPoint,angleRover,gyroRover)
+            
 
-def sendActionsToMicroController(actionDistance, angleAction,actionRate,addr,bus):
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionDistance),bus)
+            #remove this after set Gps
+            #simulateRoverGPS(Gps,listOfPoints,indexCurrentTargetPoint)
+            
+            indexCurrentTargetPoint = goToNextTargetOrNot(listOfPoints,Gps,indexCurrentTargetPoint)
+            notReachEndPoint = checkIfNotReachedEndPoint(indexCurrentTargetPoint)
+            
+            sendActionsToMicroController(angleRover,gyroRover,actionDistance, angleAction,actionRate,addr,bus)
+            print("AngleRover:%f, rate: %f, Distance: %f, AngleAction: %f, GPS: %f, i: %f" %(angleRover,gyroRover,actionDistance, angleAction,Gps.getGpsReadings()[1],indexCurrentTargetPoint))
+
+def sendActionsToMicroController(angleRover,gyroRover, actionDistance, angleAction,actionRate,addr,bus):
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue('#'),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleRover),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue('&'),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue(gyroRover),bus)
     sendArrayOfBytes(addr,convertNumberIntoAsciValue(':'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleAction),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionDistance),bus)
     sendArrayOfBytes(addr,convertNumberIntoAsciValue('$'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionRate),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleAction),bus)
     sendArrayOfBytes(addr,convertNumberIntoAsciValue(';'),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionRate),bus)
+    sendArrayOfBytes(addr,convertNumberIntoAsciValue('!'),bus)
     
 def goToNextTargetOrNot(listOfPoints,Gps,indexOfCurrentTarget):
     targetPoint = [listOfPoints[indexOfCurrentTarget][1],listOfPoints[indexOfCurrentTarget][2]]
