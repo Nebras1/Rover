@@ -41,6 +41,7 @@ void loop() {
   String actionRate="";
 
   long timeBefore =0;
+  long totalRecieveTime = 0;
   
 void receiveEvent(int howMany) {
   String valueRead = "";
@@ -48,8 +49,9 @@ void receiveEvent(int howMany) {
   while ( Wire.available()) { // loop through all but the last
     char c = Wire.read(); // receive byte as a character
     if(c == '!'){
-      mode = 5  ;
+      mode = 5;
       neg = true;
+      totalRecieveTime = (millis()-timeBefore);
       Serial.print(angleRover);
       Serial.print(",");      
       Serial.print(gyroRover);
@@ -60,7 +62,7 @@ void receiveEvent(int howMany) {
       Serial.print(",");      
       Serial.print(actionRate);
       Serial.print("  , time: ");
-      Serial.println((millis()-timeBefore));
+      Serial.println(totalRecieveTime);
       
       timeBefore=millis();
       angleRover="";
