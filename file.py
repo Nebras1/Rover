@@ -12,6 +12,24 @@ from imuDev.MpuRm3100 import IMU
     
     
 from smbus import SMBus
+import struct
+
+def ConvertToBytes(data):
+    s = struct.pack('>H', data)
+    firstByte, secondByte = struct.unpack('>BB', s)
+    dataToSend = [firstByte,secondByte]
+    return dataToSend
+
+def SendDataOfType(address,data,bus):
+    try:
+        bus.write_i2c_block_data(address,0,data)
+    except:
+        pass
+
+def toAnotherRange(OldValue,OldMin,OldMax,NewMin,NewMax):
+    NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
+    return NewValue
+
 KpDistance=1
 KpAngle=1
 KpRate=1
@@ -47,11 +65,19 @@ while True:
     elif mode == 2:
         while True:
             if imu.Readings !=None and imu.Rates !=None:
-                angle = imu.Readings['Yaw']
+                angleOld = imu.Readings['Yaw']
                 gyroZ = imu.Rates['gz']
-                print("Heading angle: %s    %s" % (angle,gyroZ))
+                angleNew = int(toAnotherRange(angleOld,-180,180,0,9000))
+
+                # SendDataOfType(addr,angleNew,bus,0)
+                SteeringAngleBytes = ConvertToBytes(angleNew+1)
+                RobotSpeedBytes = ConvertToBytes(angleNew+2)
+                BrakeValueBytes = ConvertToBytes(angleNew+3)
+                totalPacket = [SteeringAngleBytes[0],SteeringAngleBytes[1],RobotSpeedBytes[0],RobotSpeedBytes[1],BrakeValueBytes[0],BrakeValueBytes[1]]
+                SendDataOfType(addr,totalPacket,bus)
+                print("Heading angle: %s     %s    %s" % (angleOld,angleNew,gyroZ))
             
-            sleep(0.1)
+            #sleep(0.1)
             
     elif mode == 3:
         routingClass = RoutingUsage("car")

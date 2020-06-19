@@ -1763,12 +1763,18 @@ class MPU6050:
 
 
     def readGyro(self):
-        data = self.i2c.bus.read_i2c_block_data(self.address, self.MPU6050_RA_GYRO_XOUT_H, 6)
+        x = 0
+        y = 0
+        z = 0
+        try:
+            data = self.i2c.bus.read_i2c_block_data(self.address, self.MPU6050_RA_GYRO_XOUT_H, 6)
+            
+            x = self.dataConv(data[1], data[0])
+            y = self.dataConv(data[3], data[2])
+            z = self.dataConv(data[5], data[4])
         
-        x = self.dataConv(data[1], data[0])
-        y = self.dataConv(data[3], data[2])
-        z = self.dataConv(data[5], data[4])
-
+        except:
+            pass
         x = round(x*self.gres, 3)
         y = round(y*self.gres, 3)
         z = round(z*self.gres, 3)

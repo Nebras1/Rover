@@ -8,6 +8,8 @@ import math
 import utm
 
 import pyproj
+import struct
+
 geodesic = pyproj.Geod(ellps='WGS84')
 
 def convertNumberIntoAsciValue(valueToConvert):
@@ -16,6 +18,24 @@ def convertNumberIntoAsciValue(valueToConvert):
     for i in range(0,len(latLongList)):
         latLongAsciBytes.append(ord(latLongList[i]))
     return latLongAsciBytes
+
+
+def ConvertToBytes(data):
+    s = struct.pack('>H', data)
+    firstByte, secondByte = struct.unpack('>BB', s)
+    dataToSend = [firstByte,secondByte]
+    return dataToSend
+
+def SendDataOfType(address,data,bus):
+    try:
+        bus.write_i2c_block_data(address,0,data)
+    except:
+        pass
+
+def toAnotherRange(OldValue,OldMin,OldMax,NewMin,NewMax):
+    NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
+    return NewValue
+
 
 def sendArrayOfBytes(address,data,bus):
     for i in range(0,len(data)):
@@ -89,20 +109,37 @@ def mainLoopForSendTheNeededLengthAndAngle(KpDistance,KpAngle,KpRate,Gps,routing
             notReachEndPoint = checkIfNotReachedEndPoint(indexCurrentTargetPoint)
             
             sendActionsToMicroController(angleRover,gyroRover,actionDistance, angleAction,actionRate,addr,bus)
-            print("AngleRover:%f, rate: %f, Distance: %f, AngleAction: %f, GPS: %f, i: %f" %(angleRover,gyroRover,actionDistance, angleAction,Gps.getGpsReadings()[1],indexCurrentTargetPoint))
+            #print("AngleRover:%f, rate: %f, Distance: %f, AngleAction: %f, GPS: %f, i: %f" %(angleRover,gyroRover,actionDistance, angleAction,Gps.getGpsReadings()[1],indexCurrentTargetPoint))
 
 def sendActionsToMicroController(angleRover,gyroRover, actionDistance, angleAction,actionRate,addr,bus):
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue('#'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleRover),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue('&'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(gyroRover),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(':'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionDistance),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue('$'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleAction),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(';'),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionRate),bus)
-    sendArrayOfBytes(addr,convertNumberIntoAsciValue('!'),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue('#'),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleRover),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue('&'),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(gyroRover),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(':'),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionDistance),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue('$'),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(angleAction),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(';'),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue(actionRate),bus)
+    # sendArrayOfBytes(addr,convertNumberIntoAsciValue('!'),bus)
+
+    #Send AngleAction Steering
+    TotalAction = angleAction + actionRate #Range = 250+180
+    SteeringAngle = int(toAnotherRange(TotalAction,-330,330,0,9000))
+    SteeringAngleBytes = ConvertToBytes(SteeringAngle)
+    
+    #Send SpeedAction
+    RobotSpeed = int(toAnotherRange(actionDistance,0,1000,0,6000))
+    RobotSpeedBytes = ConvertToBytes(RobotSpeed)
+
+    #Send BrakeValue Flag
+    BrakeValue = 99
+    BrakeValueBytes = ConvertToBytes(BrakeValue)
+    totalPacket = [SteeringAngleBytes[0],SteeringAngleBytes[1],RobotSpeedBytes[0],RobotSpeedBytes[1],BrakeValueBytes[0],BrakeValueBytes[1]]
+    SendDataOfType(addr,totalPacket,bus)
+    print("Steering %s,  Speed %s,  BrakeValue %s"%(SteeringAngle,RobotSpeed,BrakeValue))
+    
     
 def goToNextTargetOrNot(listOfPoints,Gps,indexOfCurrentTarget):
     targetPoint = [listOfPoints[indexOfCurrentTarget][1],listOfPoints[indexOfCurrentTarget][2]]
@@ -126,7 +163,7 @@ def calculateControlAction(KpDistance,KpAngle,KpRate,Gps,listOfPoints,indexCurre
     
     if errorAngle == 0:
         errorAngle = 0.1
-    errorDistance = distance/errorAngle
+    errorDistance = distance/abs(errorAngle)
     
     actionDistance = KpDistance * errorDistance
     
