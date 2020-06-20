@@ -36,27 +36,22 @@ long timeBefore = 0;
 
 uint16_t SteeringAngle = 0;
 uint16_t RobotSpeed = 0;
-uint16_t BrakeValue = 0;
+uint8_t BrakeValue = 0;
 
-byte byteStruct[7];
+byte byteStruct[6];
+
 void receiveEvent(int howMany) {
-  
-  
+
   if (Wire.available())
   {
-    for(int i=0;i<howMany;i++){
+    timeBefore = micros();
+    for (int i = 0; i < howMany; i++) {
       byteStruct[i] = Wire.read();
-      }
+    }
+    SteeringAngle = (byteStruct[1] << 8) | byteStruct[2];
+    RobotSpeed = (byteStruct[3] << 8) | byteStruct[4];
+    BrakeValue = byteStruct[5];
     
-       SteeringAngle = (byteStruct[1] << 8) | byteStruct[2];
-    
-       RobotSpeed = (byteStruct[3] << 8) | byteStruct[4];
-    
-       BrakeValue = (byteStruct[5] << 8) | byteStruct[6];
-    
-  }
-
-  
     Serial.print(micros() - timeBefore);
     Serial.print("\t");
     Serial.print(SteeringAngle);
@@ -66,9 +61,7 @@ void receiveEvent(int howMany) {
     Serial.print(BrakeValue);
     Serial.print("\t");
     Serial.println(howMany);
-    timeBefore = micros();
-  
-  
+  }
 }
 
 
